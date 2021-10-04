@@ -52,18 +52,21 @@ A free account on Pepipost. If you don't have a one, [click here](https://app.pe
 laravel new testproject
 ```
 
-#### Step 2 - Add the package to your composer.json and run composer update.
+#### Step 2 - Add the VCS repository to your composer.json and run composer update.
 
 ```json
 
+"repositories": [
+  {
+    "type": "vcs",
+    "url": "https://github.com/iYogesharma/pepipost"
+  }
+],
+    
 "require": {
-    "iyogesharma/pepipost": "~1.0"
+    "iYogesharma/pepipost": "dev-main"
 },
-```
-#### or install with composer
 
-```bash
-$ composer require iyogesharma/pepipost
 ```
 
 #### Step 3 - Configurations 
