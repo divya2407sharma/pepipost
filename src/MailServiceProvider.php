@@ -1,5 +1,5 @@
 <?php
-namespace YS\PepiPost;
+namespace DS\PepiPost;
 
 class MailServiceProvider extends \Illuminate\Mail\MailServiceProvider
 {

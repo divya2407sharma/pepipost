@@ -1,11 +1,11 @@
 <?php
-namespace YS\PepiPost;
+namespace DS\PepiPost;
 
 use GuzzleHttp\Client as HttpClient;
 use Illuminate\Mail\TransportManager;
 use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
-use YS\PepiPost\Transport\PepiPostTransport;
+use DS\PepiPost\Transport\PepiPostTransport;
 
 class PepiPostTransportServiceProvider extends ServiceProvider
 {

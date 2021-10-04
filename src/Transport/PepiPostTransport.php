@@ -1,6 +1,6 @@
 <?php
     
-    namespace YS\PepiPost\Transport;
+    namespace DS\PepiPost\Transport;
     
     use GuzzleHttp\Client;
     use GuzzleHttp\ClientInterface;
