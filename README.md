@@ -1,10 +1,4 @@
-![pepipostlogo](https://pepipost.com/wp-content/uploads/2017/07/P_LOGO.png)
-
-[![Packagist](https://img.shields.io/packagist/dt/pepipost/pepipost-laravel-driver.svg?style=flat-square)](https://packagist.org/packages/pepipost/pepipost-laravel-driver)
-[![Packagist](https://img.shields.io/github/contributors/pepipost/pepipost-laravel-driver.svg)](https://github.com/pepipost/pepipost-laravel-driver)
-[![Packagist](https://img.shields.io/packagist/l/pepipost/pepipost-laravel-driver.svg)](https://packagist.org/packages/pepipost/pepipost-laravel-driver)
-[![Open Source Helpers](https://www.codetriage.com/pepipost/pepipost-laravel-driver/badges/users.svg)](https://www.codetriage.com/pepipost/pepipost-laravel-driver)
-[![Twitter Follow](https://img.shields.io/twitter/follow/pepi_post.svg?style=social&label=Follow)](https://twitter.com/pepi_post)
+This project is a copy of [pepipost/pepipost-laravel-driver](https://github.com/pepipost/pepipost-laravel-driver), with some customizations to make it compatible with Laravel 5.2
 
 # Laravel Driver for [Pepipost](http://www.pepipost.com/?utm_campaign=GitHubSDK&utm_medium=GithubSDK&utm_source=GithubSDK)
 
@@ -40,13 +34,11 @@ For any update of this library check [Releases](https://github.com/pepipost/lara
 
 ### Prerequisites
 
-[PHP > 7.1.3](https://www.php.net/manual/en/install.php)
+[PHP >= 5.5.9](https://www.php.net/manual/en/install.php)
 
-[Composer v1.8](https://getcomposer.org/download/)
+[Laravel 5.2](https://laravel.com/docs/5.8/installation)
 
-[Laravel 5.8](https://laravel.com/docs/5.8/installation)
-
-guzzlehttp/guzzle 6.2.0
+[guzzlehttp/guzzle ~5.3|~6.0](https://docs.guzzlephp.org/)
 
 A free account on Pepipost. If you don't have a one, [click here](https://app.pepipost.com) to signup.
 
@@ -65,13 +57,13 @@ laravel new testproject
 ```json
 
 "require": {
-    "pepipost/pepipost-laravel-driver": "~1.0"
+    "iyogesharma/pepipost": "~1.0"
 },
 ```
 #### or install with composer
 
 ```bash
-$ composer require pepipost/pepipost-laravel-driver
+$ composer require iyogesharma/pepipost
 ```
 
 #### Step 3 - Configurations 
@@ -81,7 +73,7 @@ $ composer require pepipost/pepipost-laravel-driver
     ```php
 
     'providers' => [
-        Pepipost\PepipostLaravelDriver\PepipostTransportServiceProvider::class
+        YS\PepiPost\PepipostTransportServiceProvider::class
     ];
     ```
 
@@ -163,7 +155,7 @@ This will send email and display Email sent successfully on browser.
 
 #### Additional Usage
 
-IF want to pass others parameters of Pepipost SendEmail API use embedData function and include below code as below
+IF want to pass others parameters of PepiPost SendEmail API use embedData function and include below code as below
 Add parameters as per your requirement. Do not use multiple to's,cc's,bcc's with this method.
 
 ```php
@@ -209,24 +201,5 @@ return 'Email sent successfully';
 }
 
 ```
-
-<a name="announcements"></a>
-# Announcements
-
-v1.0.0 has been released! Please see the [release notes](https://github.com/pepipost/laravel-pepipost-driver/releases/) for details.
-
-All updates to this library are documented in our [releases](https://github.com/pepipost/laravel-pepipost-driver/releases). For any queries, feel free to reach out us at dx@pepipost.com
-
-<a name="roadmap"></a>
-## Roadmap
-
-If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/pepipost/laravel-pepipost-driver/issues) and [pull requests](https://github.com/pepipost/laravel-pepipost-driver/pulls). We would love to hear your feedback.
-
-<a name="about"></a>
-## About
-pepipost-laravel library is guided and supported by the [Pepipost Developer Experience Team](https://github.com/orgs/pepipost/teams/pepis/members) .
-This pepipost library is maintained and funded by Pepipost Ltd. The names and logos for pepipost gem are trademarks of Pepipost Ltd.
-
-<a name="license"></a>
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
