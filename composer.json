@@ -1,0 +1,44 @@
+{
+    "name": "iyogesharma/pepipost",
+    "description": "This library adds a 'pepipost' mail driver to Laravel.This library is a copy of https://github.com/pepipost/pepipost-laravel-driver",
+    "keywords": ["laravel", "pepipost","laravel mail driver"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/mail": "~5.2",
+        "guzzlehttp/guzzle": "~5.3|~6.0"
+    },
+    "require-dev": {
+        "illuminate/container": "~5.2",
+        "illuminate/filesystem": "~5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "YS\\PepiPost\\": "src"
+        }
+    },
+    "authors": [
+        {
+          "name": "Yogesh Sharma",
+          "email": "iyogesharma@gmail.com"
+        },
+        {
+            "name": "Rishabh",
+            "email": "rishabhmishra625@gmail.com"
+        },
+        {
+            "name": "DX",
+            "email": "dx@pepipost.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YS\\PepiPost\\PepiPostTransportServiceProvider"
+            ]
+        }
+    },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
+
