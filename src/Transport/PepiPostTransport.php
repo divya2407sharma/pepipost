@@ -43,28 +43,24 @@
         {
             
             $data = [
-                'from'             => $this->getFrom($message),
-                'subject'          => $message->getSubject(),
-            ];
-            
-            if( $message->getTo() ) {
-                $data['personalizations'] = $this->getTo($message);
-            }
-            
-            if ($contents = $this->getContents($message)) {
-                $data['content'] = $contents;
-            }
-            
-            if ($reply_to = $this->getReplyTo($message)) {
-                $data['replyToId'] = $reply_to;
-            }
-            
-            $attachments = $this->getAttachments($message);
-            if (count($attachments) > 0) {
-                $data['attachments'] = $attachments;
-            }
-            
-            $data = $this->setParameters($message, $data);
+            "from" =>  $this->getFrom($message)['fromEmail'],
+            "subject" => $message->getSubject(),
+            "plainTextContent" => "",
+            "htmlContent" => $this->getContents($message),
+            "to" => [
+                $this->getTo($message)[0]['recipient']
+            ],
+            "applicationKey" => $this->apiKey,
+            "bcc" => [],
+            "cc" => []
+        ];
+        $payload = [
+            'headers' => [
+                'Content-Type' => 'application/json',
+                'user-agent'   => 'pepi-laravel-lib v1',
+            ],
+            'json' => $data,
+        ];
             
             $payload = [
                 'headers' => [
